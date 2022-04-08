@@ -1,0 +1,138 @@
+\documentclass[10pt]{beamer}
+%desgin Mahdi Molavi- http://mahdimolavi.ir/
+\usetheme{metropolis}
+\useoutertheme{metropolis}
+\useinnertheme{metropolis}
+\usefonttheme{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+ \usepackage{ragged2e}
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\usepackage{amsthm,amssymb,amsmath}
+\useinnertheme{default}
+\usefonttheme{professionalfonts}
+
+
+\usefonttheme{serif} % default family is serif
+\usepackage{hyperref}
+\usepackage{xepersian}
+
+\defpersianfont\chalkd[Scale=.8]{XM Yekan}
+\DeclareMathSizes{16}{14}{12}{10}  
+
+\settextfont[Scale=1.3]{XB Niloofar}%{HM XNiloofar}
+\setlatintextfont[Scale=1.0]{Times New Roman}
+%\defpersianfont\titr[Scale=1.5]{Yas}%{HM XTitr}
+%\def\titr{}
+%\def\parsitext#1{\rl{#1}}
+\setdigitfont[Scale=1.2]{Yas}
+%\setmainfont{XM Yekan}
+
+
+\title{روش‌های یادگیری تانسوری}
+\date{\today}
+\author{مهدی مولوی، }
+\institute{استاد راهنما: دکتر منصور رزقی}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\definecolor{blueucl}{RGB}{0,178,173} %which is the color of my university
+\setbeamercolor{progress bar}{fg=blueucl,bg=red!20}
+\setbeamercolor{title separator}{fg=blueucl,bg=red!20}
+\setbeamercolor{progress bar in head/foot}{fg=blueucl,bg=red!20}
+\setbeamercolor{progress bar in section page}{fg=blueucl,bg=red!20}
+
+%\pgfkeys{/metropolis/.cd,
+%	usetitleprogressbar/.code=\pgfkeysalso{outer/progressbar=frametitle},
+%	noslidenumbers/.code=\pgfkeysalso{outer/numbering=none},
+%	usetotalslideindicator/.code=\pgfkeysalso{outer/numbering=fraction},
+%	nosectionslide/.code=\pgfkeysalso{inner/sectionpage=none},
+%	 darkcolors/.code=\pgfkeysalso{color/background=dark},
+%	blockbg/.code=\pgfkeysalso{color/block=fill, inner/block=fill},
+%}
+
+
+\setbeamercolor*{structure}{bg=blueucl!20,fg=blueucl}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+%\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
+%\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=black}
+%\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+
+%\setbeamercolor{section in toc}{fg=black,bg=white}
+%\setbeamercolor{alerted text}{use=structure,fg=structure.fg!50!black!80!black}
+%
+%\setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!black}
+%\setbeamercolor{frametitle}{bg=myblue!85,fg=white}
+%
+%\setbeamercolor*{titlelike}{parent=palette primary}
+\setbeamertemplate{frametitle}[default][center]
+
+\setbeamerfont{title}{size=\LARGE,family=\chalkd,
+ series=\bfseries}
+ \setbeamerfont{author}{size=\LARGE,series=\normalfont,family=\chalkd}
+\setbeamerfont{date}{size=\footnotesize,family=\chalkd}
+% \setbeamerfont{section title}{size=\LARGE,family=\chalkd,
+%series=\bfseries}
+% \setbeamerfont{block title}{size=\footnotesize,family=\chalkd,
+% series=\bfseries}
+\setbeamerfont{standout}{size=\Huge,family=\chalkd, series=\bfseries}
+% \setbeamerfont{block title alerted}{size=\normalsize,,family=\chalkd
+% series=\bfseries}
+% \setbeamerfont*{subtitle}{size=\footnotesize,family=\chalkd}
+% \setbeamerfont{caption}{size=\small,family=\chalkd}
+% \setbeamerfont{caption name}{series=\bfseries,family=\chalkd}
+%\setbeamerfont{description item}{series=\bfseries}
+% \setbeamerfont{page number in head/foot}{size=\scriptsize}
+%\setbeamerfont{bibliography entry author}{size=\normalsize,,family=\chalkd
+%	series=\normalfont}
+%\setbeamerfont{bibliography entry title}{size=\normalsize,,family=\chalkd
+% series=\bfseries}
+% \setbeamerfont{bibliography entry location}{size=\normalsize,%
+% series=\normalfont}
+% \setbeamerfont{bibliography entry note}{size=\small,%
+%series=\normalfont}
+
+
+\setbeamerfont*{section in toc}{family=\chalkd,
+	series=\bfseries}
+\setbeamercolor{section in toc}{fg=black!80}
+ \setbeamerfont{frametitle}{size=\Large,family=\chalkd}
+ 
+ \useoutertheme[subsection=false]{miniframes}
+ \setbeamercolor{section in head/foot}{fg=black, bg=blueucl!150}
+ \setbeamerfont{section in head/foot}{size=\small,family=\chalkd}
+ 
+ \newcommand{\normP}{$l_p$نرم }
+ \newcommand{\normZero}{$l_0$نرم }
+ \newcommand{\normOne}{$l_1$نرم }
+ \newcommand{\normTwo}{$l_2$نرم }
+ \newcommand{\trans}{\mathsf{T}}
+ \newcommand\norm[1]{\left\lVert#1\right\rVert}
+
+\setbeamertemplate{footline}[frame number]
+\setbeamerfont{page number in head/foot}{size=\large,family=\chalkd}
+\setbeamercolor{page number in head/foot}{fg=black, bg=blueucl!150}
+\begin{document}
+\linespread{1.5}
+\maketitle
+
+\begin{frame}{فهرست}
+
+{\small
+	   \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+}
+\end{frame}
+\include{f1}
+\include{f2}
+\include{f3}
+\include{f4}
+\include{f5}
+\include{edit}
+
+\end{document}

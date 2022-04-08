@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{مقدمه}{3}{0}{1}
+\beamer@sectionintoc {2}{انواع تجزیه}{10}{0}{2}
+\beamer@sectionintoc {3}{ تعمیم یادگیری‌ها به ابعاد بالاتر}{19}{0}{3}
+\beamer@sectionintoc {4}{سرعت بخشی}{30}{0}{4}
+\beamer@sectionintoc {5}{رویکرد دیگر برای تجزیه SVD برای ابعاد بالاتر}{43}{0}{5}
+\beamer@sectionintoc {6}{نتیجه گیری}{64}{0}{6}
